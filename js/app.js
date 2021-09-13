@@ -15,6 +15,7 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `
+    <div class="container">
     <div class="card">
     <div class="card-body single-product">
     <img class="product-image" src=${product.image}></img>
@@ -31,8 +32,9 @@ const showProducts = (products) => {
                     </div>
                     <div class="btnGrp">
                     <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-                    <button id="details-btn" class="btn btn-danger">Details</button> 
+                    <button onclick="details()" id="details-btn" class="btn btn-danger">Details</button> 
                     </div>
+            </div>
             </div>
             </div>`
     document.getElementById("all-products").appendChild(div);

@@ -24,9 +24,7 @@
    height: 200px;
  }
 
- /* .card-body.border.border-secondary.h-100.single-product {
-   height: 500px !important;
- } */
+
 
  .single-product {
    padding: 10px;
@@ -35,10 +33,33 @@
    height: 300px;
  }
 
- .single-product:hover {
+
+
+ .fa-star {
+   color: coral;
+
+ }
+
+ .fa-star:nth-child(5) {
+   color: #000;
+ }
+
+ .btnGrp {
+   margin: 10px;
+ }
+
+ .card {
+   margin: 10px;
+   height: 500px;
+   background: oldlace !important;
+   border-radius: 10px !important;
+ }
+
+ .card:hover {
    box-shadow: 4px 4px 7px gray;
    border-radius: 10px;
    border: 1px solid cyan;
+   transition: 0.5s;
  }
 
  .product-image {

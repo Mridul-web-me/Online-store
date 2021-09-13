@@ -15,19 +15,29 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `
-    <div class="card-body border border-secondary single-product">
+    <div class="card">
+    <div class="card-body single-product">
     <img class="product-image" src=${product.image}></img>
                     <h3 class="card-title py-2">${product.title}</h3>
                     <p>Category: ${product.category}</p>
                     <h2>Price: $ ${product.price}</h2>
+                    <h4>Rating: <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    ${product.rating.rate}</h4>
+                    <h4>Review:${product.rating.count}</h4>
+                    </div>
+                    <div class="btnGrp">
                     <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
                     <button id="details-btn" class="btn btn-danger">Details</button> 
+                    </div>
+            </div>
             </div>`
     document.getElementById("all-products").appendChild(div);
-  } 
+  }
 };
-
-
 
 
 let count = 0;
@@ -45,9 +55,6 @@ const getInputValue = (id) => {
   const converted = parseFloat(element);
   return converted;
 };
-
-
-
 
 // main price update function
 const updatePrice = (id, value) => {

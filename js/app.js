@@ -32,7 +32,23 @@ const showProducts = (products) => {
                     </div>
                     <div class="btnGrp">
                     <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-                    <button onclick="details()" id="details-btn" class="btn btn-danger">Details</button> 
+                    <button type="button" class="btn btn-danger fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
+
+                    <!-- Modal -->
+                    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Product Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <h3>Category: ${product.category}</h3>
+                            <h5>Description: ${product.description}</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     </div>
             </div>
             </div>
